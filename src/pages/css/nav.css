@@ -1,0 +1,157 @@
+:root{
+  --primary-color : gold;
+  --secondary-color: white;
+  --third-color: grey;
+}
+
+li{
+  list-style: none;
+}
+
+.navLeft{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+}
+
+ .logo{
+  width: 70px;
+  height: 70;
+  border-radius: 50%;
+}
+
+.logoContainer{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+
+.profilePicture{
+  border-radius: 50%;
+  margin: 0.75em;
+  width: 60px;
+  height: 60px;
+}
+
+.connection{
+  margin-right: 10px;
+}
+
+.middle{
+  margin-right: 10em;
+  margin-top: -1.2em;
+}
+
+#loupe{
+  font-size: 1.5em;
+  position: absolute;
+  right: 27.2em;
+  top: 1.1em;
+  cursor: pointer;
+}
+
+.searchBar{
+  
+  border-radius: 10px;
+  box-shadow: grey 0px 2px 3px;
+  border: none;
+  height: 30px;
+  width: 300px;
+}
+
+.sousMenu{
+  display: none;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.mainNav{
+  position: sticky;
+  top: 0;
+}
+
+.miniNav ul li{
+  align-items: center;
+}
+.miniNav .upMenu{
+ 
+  cursor: pointer;
+}
+.sousMenu li{
+  margin-inline: 1em;
+  padding: 1em;
+} 
+
+.miniNav .upMenu {
+  padding-inline: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.upMenu li:hover .sousMenu{
+  display: block;
+  position: absolute;
+  z-index: 11;
+
+}
+
+
+.miniNav{
+  align-items: center;
+  width: 600px;
+  height: 35px;
+  background-color: white;
+  height: 35px;
+  position: absolute;
+  z-index: 11;
+  left: 27em;
+  top: 4.2em;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+#underGaming{
+  width: 15em;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.topMenu{
+  position: sticky;
+  top: 0;
+  z-index: 11;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  box-shadow: 3x 5px black;
+
+  
+}
+
+
+
+.navRight{
+  align-items: center;
+  display: flex;
+  justify-content: end;
+}
+
+#cart{
+  font-size: 3em;
+  color: black;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+

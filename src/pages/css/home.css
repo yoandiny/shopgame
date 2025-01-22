@@ -1,0 +1,119 @@
+:root{
+    --back-color: #003366;
+    --text-color: #fff;
+}
+
+.title{
+    color: var(--text-color);
+}
+
+.sousTitre{
+    color: grey;
+}
+
+.main{
+    padding: 15px;
+    height: auto;
+    background-color: var(--back-color);
+}
+
+.promo{
+    box-shadow: black 0px 2px 3px;
+    margin-left: 13em;
+    border-radius: 15px;
+    width: 1000px;
+    height: 400px;
+}
+
+.popular{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: black 0px 2px 3px;
+    margin-block: 3em;
+    margin-inline: 7.5em;
+    width: 1200px;
+    height: auto;
+}
+
+.promo img{
+    border-radius: inherit;
+    width: inherit;
+    height: inherit;
+}
+
+.categContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.categModel{
+    cursor: pointer;
+    margin-inline: 1.5em;
+    margin-block: 1em;
+    border-radius: 15px;
+    box-shadow: black 0px 2px 5px;
+    width: 150px;
+    height: 100px;
+    
+}
+
+.popular h2{
+    font-size: 1.4em;
+}
+
+.categModel:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.categModel img{
+    border-radius: inherit;
+    width: inherit;
+    height: inherit;
+    
+}
+
+/* Item Model */
+.itemModel{
+    margin: 1em;
+    border-radius: 15px;
+    box-shadow: black 0px 2px 3px;
+    width: 200px;
+    height: 300px;
+}
+
+.itemImg{
+    /* margin-top: 5px; */
+    margin-left: 2.8em;
+    width: 100px;
+}
+
+.itemImg, .itemName, .itemDesc, .itemPrice, .buyButton{
+    padding: 0.3em;
+}
+
+.buyButton{
+    cursor: pointer;
+    margin-left: 3em;
+    margin-bottom: 1em;
+    width: 90px;
+    height: 45px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.buyButton:hover{
+    background-color: #003366;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* Item Model */
