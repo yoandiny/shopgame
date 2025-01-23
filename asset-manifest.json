@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/shopgame/static/css/main.5430364c.css",
+    "main.js": "/shopgame/static/js/main.9165a16d.js",
+    "static/js/488.67e732f1.chunk.js": "/shopgame/static/js/488.67e732f1.chunk.js",
+    "static/media/cod.jpg": "/shopgame/static/media/cod.b9f13da9d55ccce3c319.jpg",
+    "static/media/logo.jpg": "/shopgame/static/media/logo.9ab823ebe145f8ed5031.jpg",
+    "static/media/10e.jpg": "/shopgame/static/media/10e.bdbd4bdaba0d9f4d0748.jpg",
+    "static/media/vbucks.jpeg": "/shopgame/static/media/vbucks.70661c53ffb516227f75.jpeg",
+    "static/media/netflix.jpg": "/shopgame/static/media/netflix.6eb94f213202bc53c98a.jpg",
+    "static/media/pdp.jpg": "/shopgame/static/media/pdp.7a6a6c54279a54d1977c.jpg",
+    "static/media/google.jpg": "/shopgame/static/media/google.bad266148defd4deed9b.jpg",
+    "static/media/playstation.jpg": "/shopgame/static/media/playstation.0ae4dd2e3d2037febc21.jpg",
+    "index.html": "/shopgame/index.html",
+    "main.5430364c.css.map": "/shopgame/static/css/main.5430364c.css.map",
+    "main.9165a16d.js.map": "/shopgame/static/js/main.9165a16d.js.map",
+    "488.67e732f1.chunk.js.map": "/shopgame/static/js/488.67e732f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5430364c.css",
+    "static/js/main.9165a16d.js"
+  ]
+}
