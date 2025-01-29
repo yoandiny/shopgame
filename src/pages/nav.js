@@ -2,26 +2,40 @@ import './css/nav.css';
 import { Link } from 'react-router-dom';
 import logo  from './img/logo.jpg';
 import pdp from './img/pdp.jpg';
+import cookie from 'js-cookie';
+import { useEffect } from 'react';
 
 
 
 
 
-function Nav({loggedIn}) {
+function Nav() {
 
 //Initiate Part
+const loggedIn = cookie.get('loggedIn');
+let userSection;
 
 
 // Logic part
 
+useEffect(() => {
+  alert(loggedIn);
+})
 
-  const change = {
-    display: loggedIn ?'block':'none'
-  };
+if(loggedIn === 'true'){
+  userSection= (
+    <li id='userConnected' >
+      <Link to="/cart"><i id='cart' class='bx bx-cart'></i></Link>
+      <Link to="/profile"><img id='profilePicture' className='profilePicture' src={pdp} alt="" /> </Link>
+    </li>
+  );
+}else{
+  userSection= (
+    <li id='notConnected' ><Link to="/register">Se connecter/S'inscrire</Link></li>
+  );
+}
 
-  const reChange = {
-    display: loggedIn ?'none':'block'
-  };
+  
 
 //Visual PArt
   return (
@@ -40,10 +54,7 @@ function Nav({loggedIn}) {
         <i id='loupe' className='bx bx-search-alt-2'></i>
         </section>
         <section className ="navRight">
-        
-        <li style={change}><Link to="/cart"><i id='cart' class='bx bx-cart'></i></Link></li>
-        <li><Link to="/profile"><img style={change} className='profilePicture' src={pdp} alt="" /> </Link> <Link style={reChange} to="/register">Se connecter/S'inscrire</Link></li>
-        
+          {userSection}
         </section>
       </nav>
 
@@ -51,7 +62,6 @@ function Nav({loggedIn}) {
       <ul className='upMenu'>
         <li ><p>Gaming <i class='bx bxs-down-arrow'></i></p>
           <ul id='underGaming' className='sousMenu'>
-            <li><Link to="/giftCard">Cartes cadeaux</Link></li>
             <li><Link to="/gamePoints"> Monnaie InGame</Link></li>
             <li><Link to="/Games">Jeux</Link></li>
           </ul>

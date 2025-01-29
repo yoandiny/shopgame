@@ -6,7 +6,8 @@ import Cart from './pages/cart';
 import Profile from './pages/profile';
 import Register from './pages/register';
 import Login from './pages/login';
-import { useState } from 'react';
+import { useEffect } from 'react';
+import cookie from 'js-cookie';
 
 
 
@@ -14,7 +15,11 @@ import { useState } from 'react';
 function App() {
 
 //Initiate Part
-const [loggedIn] = useState(false);
+cookie.set('loggedIn', false);
+
+useEffect(() => {
+ 
+})
 
 // Logic part
 
@@ -23,11 +28,11 @@ const [loggedIn] = useState(false);
     <Router>
       <div className='body'>
         <link href="https://unpkg.com/boxicons/css/boxicons.min.css" rel="stylesheet"/>
-       <Nav loggedIn={loggedIn}/>
+       <Nav />
 
      </div>
      <Routes>
-     <Route path="/" element={<Home loggedIn={loggedIn} />} />
+     <Route path="/" element={<Home />} />
      <Route path='/cart' element={<Cart/>}/>
      <Route path='/profile' element={<Profile/>}/>
      <Route path='/register' element={<Register/>} />

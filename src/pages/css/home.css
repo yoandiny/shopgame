@@ -25,7 +25,7 @@
     height: 400px;
 }
 
-.popular{
+.allItem{
     background-color: #fff;
     border-radius: 15px;
     box-shadow: black 0px 2px 3px;
@@ -33,6 +33,10 @@
     margin-inline: 7.5em;
     width: 1200px;
     height: auto;
+}
+
+.itemText{
+    padding-left: 1em;
 }
 
 .promo img{
@@ -90,6 +94,12 @@
 
 .itemImg, .itemName, .itemDesc, .itemPrice, .buyButton{
     padding: 0.3em;
+    white-space: nowrap;
+    font-size: inherit;
+}
+
+#google{
+width: 100px;
 }
 
 .buyButton{
@@ -117,3 +127,51 @@
 
 
 /* Item Model */
+
+.adBanner{
+    border-radius: 15px;
+    margin-left: 7em;
+    width: 900px;
+    height: 225px;
+    box-shadow: black 0px 2px 3px;
+
+}
+
+.adBanner img{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+/* Game model */
+.gameModel{
+    margin: 1em;
+    border-radius: 15px;
+    box-shadow: black 0px 2px 3px;
+    width: 200px;
+    height: auto;
+}
+
+.gameBuy{
+    cursor: pointer;
+    margin-left: 3em;
+    margin-bottom: 1em;
+    width: 90px;
+    height: 45px;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.gameBuy:hover{
+    background-color: #003366;
+    color: #fff;
+    transition: all 0.5s;
+}
+
+.gameContainer{
+    display: flex;
+    flex-direction: row;
+}
+/* Game model */
