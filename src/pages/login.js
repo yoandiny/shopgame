@@ -1,12 +1,13 @@
 import './css/login.css';
 import { Link, useNavigate } from 'react-router-dom';
-import cookie from 'js-cookie';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import {useAppContext} from '../Appcontext';
+
 
 function Login(){
     //Initiate Part//
-    const loggedIn = cookie.get('loggedIn');
+    const {loggedIn, setLoggedIn} = useAppContext();
     const navigate = useNavigate();
     const [loginForm, setLoginForm] = useState({
         mail: '',
@@ -15,24 +16,35 @@ function Login(){
 
     //Logic Part//
     useEffect(() => {
-        if(loggedIn === 'true'){
-            navigate('/profile');
-        }
+      if(loggedIn){
+        navigate("/profile")
+      }
     })
+
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setLoginForm({ ...loginForm, [name]: value });
       };
 
-    const handleLogin = () =>{
-        axios.post("http://localhost:3001/login", loginForm)
-        .then((response) => {
-            if(response.data === true){
-                alert("Connected")
-            }
-        })
-    }
+      const handleLogin = async(e) => {
+        e.preventDefault();
+        try {
+          const res = await axios.post("http://localhost:3001/login", loginForm, { withCredentials: true });
+      
+          if (res.status === 200) {
+           
+            navigate('/');
+            setLoggedIn(true);
+            alert("Bienvenue")
+          } else {
+            alert('Échec de la connexion');
+          }
+        } catch (error) {
+          alert('Une erreur est survenue : ' + error.message);
+        }
+      };
+      
 
     //Visual Part//
 return(<div className='mainLogin'>

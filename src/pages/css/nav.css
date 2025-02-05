@@ -61,69 +61,18 @@ li{
   width: 300px;
 }
 
-.sousMenu{
-  display: none;
-  background-color: white;
-  border-radius: 15px;
-}
 
 .mainNav{
+  margin: 1em;
+
   position: sticky;
   top: 0;
 }
 
-.miniNav ul li{
-  align-items: center;
-}
-.miniNav .upMenu{
- 
-  cursor: pointer;
-}
-.sousMenu li{
-  margin-inline: 1em;
-  padding: 1em;
-} 
 
-.miniNav .upMenu {
-  padding-inline: 1em;
-  display: flex;
-  justify-content: space-between;
-}
-
-
-
-.upMenu li:hover .sousMenu{
-  display: block;
-  position: absolute;
-  z-index: 11;
-
-}
-
-
-.miniNav{
-  align-items: center;
-  width: 600px;
-  height: 35px;
-  background-color: white;
-  height: 35px;
-  position: absolute;
-  z-index: 11;
-  left: 27em;
-  top: 4.2em;
-  border-radius: 5px;
-  white-space: nowrap;
-}
-
-#underGaming{
-  width: 15em;
-}
-
-a{
-  text-decoration: none;
-  color: black;
-}
 
 .topMenu{
+  border-radius: 25px;
   position: sticky;
   top: 0;
   z-index: 11;
@@ -142,6 +91,16 @@ a{
   align-items: center;
   display: flex;
   justify-content: end;
+  margin-right: 1em;
+}
+
+.navRight a{
+  padding: 1em;
+}
+
+#profile{
+  font-size: 3em;
+  color: black;
 }
 
 #cart{
@@ -150,8 +109,9 @@ a{
 }
 
 #notConnected{
-  padding: 2px;
-  margin-right: 5px;
+  padding-inline: 1.5em;
+  padding-block: 0.3em;
+  margin: 1.5em;
   border: solid black 2px;
   border-radius: 5px;
 }
