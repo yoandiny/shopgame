@@ -1,10 +1,8 @@
 import './css/nav.css';
 import { Link } from 'react-router-dom';
 import logo  from './img/logo.jpg';
-import pdp from './img/pdp.jpg';
-import cookie from 'js-cookie';
 import { useEffect } from 'react';
-import {useAppContext} from '../Appcontext';
+
 
 
 
@@ -39,11 +37,13 @@ useEffect(() => {
 
         </section>
         <section className ="middle">
-        <input className='searchBar' type="text" placeholder='Votre recherche' />
-        <i id='loupe' className='bx bx-search-alt-2'></i>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/'>Shop</Link></li>
+        <li><Link to='/'>Blog</Link></li>
+        
         </section>
         <section className ="navRight">
-         <li></li>
+         <li><Link to=''><i id='loupe' className='bx bx-search-alt-2'></i></Link></li>
          <li> <Link to="/cart"><i id='cart' class='bx bxs-cart'></i></Link></li>
          <li> <Link to="/profile"><i id='profile' class='bx bxs-user'></i></Link></li>
         </section>

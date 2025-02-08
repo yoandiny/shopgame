@@ -1,13 +1,14 @@
 import './css/login.css';
+import { jwtDecode } from "jwt-decode";
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useAppContext} from '../Appcontext';
+
 
 
 function Login(){
     //Initiate Part//
-    const {loggedIn, setLoggedIn} = useAppContext();
+
     const navigate = useNavigate();
     const [loginForm, setLoginForm] = useState({
         mail: '',
@@ -16,9 +17,7 @@ function Login(){
 
     //Logic Part//
     useEffect(() => {
-      if(loggedIn){
-        navigate("/profile")
-      }
+     
     })
 
 
@@ -33,10 +32,16 @@ function Login(){
           const res = await axios.post("http://localhost:3001/login", loginForm, { withCredentials: true });
       
           if (res.status === 200) {
-           
+           localStorage.setItem("isLogged", "true");
+           const token = res.data.token;
+           const decodedToken = jwtDecode(token);
+
+           if(token){
+            localStorage.setItem("username", decodedToken.username);
+           }
             navigate('/');
-            setLoggedIn(true);
-            alert("Bienvenue")
+            
+          
           } else {
             alert('Échec de la connexion');
           }

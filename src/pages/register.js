@@ -11,7 +11,8 @@ function Register(){
     const [formData, setFormData] = useState({
         username: '',
         mail: '',
-        password: '',
+        phone: '',
+        password: ''
     });
 
     const sendData = async(e) =>{
@@ -53,12 +54,19 @@ return(
             <form action="POST" onSubmit={HandleSubmit} onChange={handleChange} >
                 <label htmlFor="username">Nom d'utilisateur:</label>
                 <input className='formInput' type="text" name='username' value={formData.username} required />
+
                 <label htmlFor="mail">Adresse E-mail:</label>
-                <input className='formInput' type="mail" name="mail" id="mail" value={formData.mail} required />
+                <input className='formInput' type="email" name="mail" id="mail" value={formData.mail} required />
+
+                <label htmlFor="tel">Portable:</label>
+                <input className='formInput' type="tel" name="phone" id="phone" value={formData.mail} required />
+
                 <label htmlFor="password">Mot de passe:</label>
                 <input className='formInput' type="password" name="password" id="password" value={formData.password} required />
+
                 <label htmlFor="rePassword">Re-taper votre Mot de passe:</label>
                 <input className='formInput' type="password" name="rePassword" id="rePassword" required />
+
                 <button id='submit' type='submit'  >S'inscrire</button>
 
             </form>

@@ -10,10 +10,8 @@ import { useState } from 'react';
 
 
 function App() {
-  const [loggedIn, setLoggedIn] = useState(()=> {
-    const initialLoginState = localStorage.getItem("isLoggedIn") === "true";
 
-  })
+
 
   return (
 

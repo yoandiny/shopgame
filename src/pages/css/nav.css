@@ -40,17 +40,17 @@ li{
 }
 
 .middle{
-  margin-right: 10em;
-  margin-top: -1.2em;
+  display: flex;
+  flex-direction: row;
 }
 
-#loupe{
-  font-size: 1.5em;
-  position: absolute;
-  right: 27.2em;
-  top: 1.1em;
-  cursor: pointer;
+.middle *{
+  color: black;
+  padding-inline: 1em;
+  font-weight: bold;
 }
+
+
 
 .searchBar{
   
@@ -61,10 +61,15 @@ li{
   width: 300px;
 }
 
+a{
+  text-decoration: none;
+}
+
 
 .mainNav{
-  margin: 1em;
-
+  margin-block: 1em;
+  margin-inline: auto;
+  width: 1400px;
   position: sticky;
   top: 0;
 }
@@ -98,14 +103,22 @@ li{
   padding: 1em;
 }
 
+#loupe{
+  font-size: 3em;
+  cursor: pointer;
+  color: black;
+}
+
 #profile{
   font-size: 3em;
   color: black;
+  cursor: pointer;
 }
 
 #cart{
   font-size: 3em;
   color: black;
+  cursor: pointer;
 }
 
 #notConnected{
