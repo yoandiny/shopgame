@@ -34,12 +34,6 @@
     align-items: center;
 }
 
-.lateralMenu ul li:hover > a, .lateralMenu ul li:hover{
-    color: var(--primary-color);
-}
-
-
-
 #lateralIcon{
     font-size: 1.3em;
 }
@@ -57,9 +51,43 @@
 /* Lateral Menu */
 
 /* Profile Container */
+.profilePic{
+    margin-block: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
+}
 
+.profilePic *{
+    margin-inline: 1em;
+}
 
+.pdp{
+    border-radius: 50%;
+    width: 166px;
+    aspect-ratio: 1/1;
+}
 
+.orderView{
+  margin: auto;  
+  display: flex;
+  flex: 1 1 0;
+}
+
+.proccedOrder, .waitingOrder{
+    display: flex;
+    flex-direction: 1 1 0;
+    border-radius: 15px;
+    background-color: var(--order-view);
+    width: 456px;
+    height: 210px;
+    margin-right: 37px;
+}
+
+.proccedOrder *, .waitingOrder *{
+    color: white;
+    margin: 1em;
+}
 
 /* Profile Container */

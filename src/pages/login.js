@@ -38,8 +38,10 @@ function Login(){
 
            if(token){
             localStorage.setItem("username", decodedToken.username);
+            localStorage.setItem("mail", decodedToken.mail);
+            localStorage.setItem("phone", decodedToken.phone)
            }
-            navigate('/');
+            navigate('/profile');
             
           
           } else {

@@ -59,7 +59,7 @@ return(
                 <input className='formInput' type="email" name="mail" id="mail" value={formData.mail} required />
 
                 <label htmlFor="tel">Portable:</label>
-                <input className='formInput' type="tel" name="phone" id="phone" value={formData.mail} required />
+                <input className='formInput' type="tel" name="phone" id="phone" value={formData.phone} required />
 
                 <label htmlFor="password">Mot de passe:</label>
                 <input className='formInput' type="password" name="password" id="password" value={formData.password} required />
